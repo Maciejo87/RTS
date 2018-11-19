@@ -5,9 +5,14 @@ using UnityEngine.AI;
 
 public class Unit : MonoBehaviour
 {
+
+
     const string ANIMATOR_SPEED = "Speed", 
         ANIMATOR_ALIVE = "Alive",
         ANIMATOR_ATTACK = "Shoot";
+
+    public static List<ISelectable> SelectableUnits { get { return selectableUnits; } }
+    static List<ISelectable> selectableUnits = new List<ISelectable>();
 
     public float HealthPercent {  get { return hp / hpMax; } }
 
@@ -18,18 +23,33 @@ public class Unit : MonoBehaviour
     [SerializeField]
     GameObject hpBarPrefab;
 
+    protected HealthBar healthBar;
     NavMeshAgent nav;
     Animator animator;
-    // Use this for initialization
+
     private void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         hp = hpMax;
-        Instantiate(hpBarPrefab, transform);
+        healthBar = Instantiate(hpBarPrefab, transform).GetComponent<HealthBar>();
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        if (this is ISelectable)
+        {
+            selectableUnits.Add(this as ISelectable);
+            (this as ISelectable).SetSelected(false);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (this is ISelectable) selectableUnits.Remove(this as ISelectable);
+    }
+
+
     void Update ()
     {
 		if(target)

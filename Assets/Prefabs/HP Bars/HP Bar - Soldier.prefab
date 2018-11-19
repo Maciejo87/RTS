@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224505151970503834}
   - component: {fileID: 114765718464824030}
+  - component: {fileID: 114249778435112944}
   m_Layer: 5
   m_Name: HP Bar - Soldier
   m_TagString: Untagged
@@ -76,6 +77,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114249778435112944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1012731209574212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ed0fee6f70abe4cb64f39627f2cc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 2.5, z: 0}
 --- !u!114 &114302013874994596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,8 +249,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1012731209574212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 270.014}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -0.03, y: 0.03, z: 1}
   m_Children:
   - {fileID: 224850180415470310}
   - {fileID: 224223051172427528}
@@ -246,7 +259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 299.5927, y: 53}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224850180415470310

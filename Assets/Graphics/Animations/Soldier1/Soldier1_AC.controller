@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: Soldier1_AC
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Allive
+  - m_Name: Alive
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -119,7 +119,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Shoot
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: Allive
+    m_ConditionEvent: Alive
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102465633648854824}
