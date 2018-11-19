@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSpeed: 100
-  zoomSpeed: 0
+  zoomSpeed: 1
   groundHeight: 50
   cameraHeightMinMax: {x: 6, y: 27}
   cameraRotationMinMax: {x: 32.17, y: 70.14}
