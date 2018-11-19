@@ -8,7 +8,16 @@ public class Unit : MonoBehaviour
     const string ANIMATOR_SPEED = "Speed", 
         ANIMATOR_ALIVE = "Alive",
         ANIMATOR_ATTACK = "Shoot";
+
+    public float HealthPercent {  get { return hp / hpMax; } }
+
     public Transform target;
+
+    [SerializeField]
+    float hp, hpMax = 100;
+    [SerializeField]
+    GameObject hpBarPrefab;
+
     NavMeshAgent nav;
     Animator animator;
     // Use this for initialization
@@ -16,6 +25,8 @@ public class Unit : MonoBehaviour
     {
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        hp = hpMax;
+        Instantiate(hpBarPrefab, transform);
     }
 
     // Update is called once per frame
@@ -34,5 +45,6 @@ public class Unit : MonoBehaviour
         speedVector.y = 0;
         float speed = speedVector.magnitude;
         animator.SetFloat(ANIMATOR_SPEED, speed);
+        animator.SetBool(ANIMATOR_ALIVE, hp > 0);
     }
 }
