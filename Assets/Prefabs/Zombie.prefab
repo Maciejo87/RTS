@@ -708,7 +708,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899757229922962}
   m_LocalRotation: {x: -0.50000036, y: 0.49999967, z: 0.49999967, w: 0.50000036}
-  m_LocalPosition: {x: -0, y: 0.8729375, z: -0.0032746887}
+  m_LocalPosition: {x: 0, y: 0.8729362, z: -0.0032697404}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
   m_Children:
   - {fileID: 4808463715152680}
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   stoppingDistance: 1
   idlingCooldown: 2
   patrolRadius: 10.67
-  chasingSpeed: 2
+  chasingSpeed: 4
 --- !u!135 &135736046546338926
 SphereCollider:
   m_ObjectHideFlags: 1
